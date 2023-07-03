@@ -1,0 +1,42 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<br>
+<div class="row">
+	<div class="col-md-5">
+		<h5>VALIDATION</h5>
+		<hr>
+		<div class="card card-body">
+			<table class="table table-sm" border="1" >
+				<tr>
+                    <th>Durée</th>
+                    <th>Machine</th>
+					<th>Date</th>
+					<th>Heure</th>
+
+
+				</tr>
+                {% for val in val %}
+                <tr>
+                    <th>{{val.Dur}}</th>
+                    <th>{{val.id_machine}}</th>
+					<th>{{val.Date}}</th>
+					<th>{{val.heure}}</th>
+                </tr>
+                {% endfor %}
+
+
+			</table>
+			    <div class="mt-4">
+                <form>
+  <input type="button" value="Retour" class="bg-gray-900 p-3 cursor-pointer w-full" onclick="history.go(-1)">
+</form>
+      </div>
+		</div>
+	</div>
+
+
+</div>
+
+
+{% endblock content%}

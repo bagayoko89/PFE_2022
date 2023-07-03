@@ -1,0 +1,53 @@
+{% extends 'main.html' %}
+{% block content %}
+{%load static%}
+
+<br>
+<div class="row">
+	<div class="col-md-2">
+		<hr>
+		<div class="card card-body">
+			<a class="btn btn-primary  btn-sm btn-block" style="background-color:red" href="val">Validation</a>
+			<img src="{% static 'images/val.png' %}">
+
+
+
+		</div>
+	</div>
+
+	<div class="col-md-2">
+		<hr>
+		<div class="card card-body">
+			<a class="btn btn-primary  btn-sm btn-block" style="background-color:red" href="inter">Intervention</a>
+			<img src="{% static 'images/maint.jpg' %}">
+		</div>
+	</div>
+
+    <div class="col-md-2">
+		<hr>
+		<div class="card card-body">
+			<a class="btn btn-primary  btn-sm btn-block" style="background-color:red" href="DT">Down_time</a>
+			<img src="{% static 'images/DT.png' %}">
+		</div>
+	</div>
+
+	<div class="col-md-2">
+		<hr>
+		<div class="card card-body">
+			<a class="btn btn-primary  btn-sm btn-block" style="background-color:red" href="chang">Change_over</a>
+			<img src="{% static 'images/outer.png' %}">
+		</div>
+	</div>
+
+
+	<div class="col-md-2">
+		<hr>
+		<div class="card card-body">
+			<a class="btn btn-primary  btn-sm btn-block" style="background-color:red" href="micro">Micro_arrets</a>
+		</div>
+	</div>
+
+</div>
+
+
+{% endblock content%}

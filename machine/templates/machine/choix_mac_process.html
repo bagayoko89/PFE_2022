@@ -1,0 +1,32 @@
+{% extends 'main.html' %}
+{% block content %}
+
+{%load static%}
+
+<br>
+<h5>Process:Choix Machine</h5>
+<hr>
+<div class="row">
+	<div class="col-md-4">
+		<div class="card card-body">
+			<table class="table table-sm">
+				<tr>
+
+				</tr>
+				{% for machine in machine %}
+				<tr>
+				 <th> <a class="btn btn-primary  btn-sm btn-block"  href="{% url 'sui' machine.id %}">{{machine.nom}} </a></th>
+					</tr>
+				{% endfor %}
+
+			</table>
+		</div>
+	</div>
+
+
+</div>
+
+
+{% endblock content%}
+
+

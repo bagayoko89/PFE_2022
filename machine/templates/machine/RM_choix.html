@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+{% block content %}
+
+{%load static%}
+
+<h2>{{prob.id_problem}}: {{prob.description}}</h2>
+
+<br>
+<div class="col-md-3">
+			<a class="btn btn-success btn-sm btn-block" href="{% url 'rm' machine.id prob.id_problem%}">Analyse Ishikawa</a>
+	</div>
+<hr>
+<div class="row">
+
+	<div class="col-md-3">
+		<img src="/images/{{prob.image}}" width="170" height="170">
+
+	</div>
+
+	<div class="col-md-3">
+			<img src="/images/{{prob.image}}" width="170" height="170">
+	</div>
+
+	<div class="col-md-3">
+			<img src="/images/{{prob.image}}" width="170" height="170">
+	</div>
+
+	<div class="col-md-3">
+			<img src="/images/{{prob.image}}" width="170" height="170">
+	</div>
+
+
+</div>
+
+
+{% endblock content%}

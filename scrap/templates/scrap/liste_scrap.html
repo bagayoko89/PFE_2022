@@ -1,0 +1,43 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<br>
+<div class="row">
+	<div class="col-md-5">
+		<h5>Scrap</h5>
+		<hr>
+		<div class="card card-body">
+			<table class="table table-sm" border="1" >
+				<tr>
+                    <th>Occurence</th>
+                    <th>id_problem</th>
+					<th>Date</th>
+					<th>Heure</th>
+
+
+
+				</tr>
+                {% for scrap in scrap %}
+                <tr>
+                    <th>{{scrap.Occurence}}</th>
+                    <th>{{scrap.id_problem}}</th>
+					<th>{{scrap.Date}}</th>
+					<th>{{scrap.heure}}</th>
+                </tr>
+                {% endfor %}
+
+
+			</table>
+			    <div class="mt-4">
+                <form>
+  <input type="button" value="Retour" class="bg-gray-900 p-3 cursor-pointer w-full" onclick="history.go(-1)">
+</form>
+      </div>
+		</div>
+	</div>
+
+
+</div>
+
+
+{% endblock content%}

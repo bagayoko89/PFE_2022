@@ -1,0 +1,49 @@
+{% extends 'main.html' %}
+{% block content %}
+
+{% if messages %}
+      {% for message in messages %}
+        <span class="block text-center text-xl">{{ message }}</span>
+      {% endfor %}
+    {% endif %}
+    <form action="" method="post" enctype="multipart/form-data" class="join-form mt-8 m-auto">
+      {% csrf_token %}
+      <h5>Ajouter un nouveau défaut</h5>
+      <div class="mt-4">
+        {{ form.id_problem }}
+        <span class="text-sm text-red-600">
+          {{form.id_problem.errors}}
+        </span>
+      </div>
+
+        <div class="mt-4">
+        {{ form.description }}
+        <span class="text-sm text-red-600">
+          {{form.description.errors}}
+        </span>
+      </div>
+
+
+         <div class="mt-4">
+        {{ form.id_station }}
+        <span class="text-sm text-red-600">
+          {{form.id_station.errors}}
+        </span>
+      </div>
+
+        <div class="mt-4">
+        {{ form.image }}
+        <span class="text-sm text-red-600">
+          {{form.image.errors}}
+        </span>
+      </div>
+
+
+      <div class="mt-4">
+        <input type="submit" value="Valider" class="bg-gray-900 p-3 cursor-pointer w-full">
+                      <form>
+  <input type="button" value="Retour" class="bg-gray-900 p-3 cursor-pointer w-full" onclick="history.go(-1)">
+</form>
+      </div>
+    </form>
+{% endblock content%}

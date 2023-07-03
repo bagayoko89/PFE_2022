@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+{% block content %}
+
+{%load static%}
+
+<style>
+.contenant {
+  position: relative;
+  text-align: center;
+  color: red;
+}
+
+.texte_centrer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>
+<div id="div1" style="visibility:visible"><h1 align="center">BIENVENUE: {{request.user}}</h1></div>
+
+ <script type="text/javascript">
+	 function showDiv1(){
+	 document.getElementById("div1").style.visibility="hidden"; }
+	 setTimeout("showDiv1()",3000);
+ </script>
+<div class="row">
+
+
+	<div class="col-md-3">
+		<img src="{% static 'images/img.png' %}" alt="image">
+
+	</div>
+
+
+
+
+</div>
+
+
+{% endblock content%}

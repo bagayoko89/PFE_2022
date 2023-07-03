@@ -1,0 +1,65 @@
+{% extends 'main.html' %}
+{% block content %}
+
+{%load static%}
+
+<br>
+<div class="row">
+	<div class="col-md-4">
+		<div class="card card-body">
+			<a class="btn btn-primary  btn-big btn-block" href="ajm">AJOUTER UNE MACHINE</a>
+
+			<table class="table table-sm" border="1" >
+				<tr>
+                    <th>NOM</th>
+					<th>ID</th>
+
+				</tr>
+                {% for machine in machine %}
+                <tr>
+                    <th>{{machine.nom}}</th>
+					<th>{{machine.id}}</th>
+
+                </tr>
+                {% endfor %}
+
+
+			</table>
+
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<div class="card card-body">
+			<a class="btn btn-primary  btn-big btn-block" href="ajs">AJOUTER UNE STATION</a>
+			<table class="table table-sm" border="1" >
+				<tr>
+                    <th>NOM_station</th>
+					<th>Machine</th>
+
+				</tr>
+                {% for stat in stat %}
+                <tr>
+                    <th>{{stat.Num_station}}</th>
+					<th>{{stat.id_machine}}</th>
+
+                </tr>
+                {% endfor %}
+
+
+			</table>
+
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<div class="card card-body">
+			<a class="btn btn-primary  btn-big btn-block" style="background-color:red"  href="ajd">AJOUTER DEFAUT</a>
+		</div>
+	</div>
+
+
+</div>
+
+
+{% endblock content%}

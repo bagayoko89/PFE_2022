@@ -1,0 +1,38 @@
+{% extends 'main.html' %}
+{% block content %}
+
+{%load static%}
+
+<br>
+<div class="row">
+	<div class="col-md-4">
+		<hr>
+		<div class="card card-body">
+			<a class="btn btn-primary  btn-sm btn-block" style="background-color:green" href="{% url 'suivi' machine.id %}/prod">Production</a>
+			<img src="{% static 'images/prod.jpg' %}">
+
+
+
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<hr>
+		<div class="card card-body">
+			<a class="btn btn-primary  btn-sm btn-block" style="background-color:red" href="{% url 'suivi' machine.id %}/scrap">Scrap</a>
+			<img src="{% static 'images/P1_0.jpg' %}">
+		</div>
+	</div>
+
+    <div class="col-md-4">
+		<hr>
+		<div class="card card-body">
+			<a class="btn btn-primary  btn-sm btn-block" style="background-color:red" href="{% url 'suivi' machine.id %}/DOT">Down time</a>
+			<img src="{% static 'images/DT.png' %}">
+		</div>
+	</div>
+
+</div>
+
+
+{% endblock content%}

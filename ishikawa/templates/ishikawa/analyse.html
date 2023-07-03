@@ -1,0 +1,73 @@
+{% extends 'main.html' %}
+{% block content %}
+
+{%load static%}
+
+<h1>ISHIKAWA DIAGRAM</h1>
+
+
+<div class="row">
+
+	<div class="col-md-4">
+		<div class="card card-body">
+			<!--{% if imac%} {% endif%} -->
+			<h5>Machine</h5>
+			{% for cmac in cmac%}
+			<a href="{% url 'whmac' machine.id prob.id_problem cmac.id %}">{{cmac.nom}}</a>
+			{% endfor %}
+
+
+
+
+		</div>
+
+	</div>
+
+
+	<div class="col-md-4">
+		<div class="card card-body">
+			<h5 >Matière</h5>
+			{% for cmat in cmat%}
+			<a href="{% url 'whmat' machine.id prob.id_problem cmat.id %}">{{cmat.nom}}</a>
+			{% endfor %}
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<div class="card card-body">
+			<h5 >Millieu</h5>
+			{% for cmi in cmi%}
+			<a href="{% url 'whmil' machine.id prob.id_problem cmi.id %}">{{cmi.nom}}</a>
+			{% endfor %}
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<div class="card card-body">
+			<h5 >Methode</h5>
+			{% for cme in cme%}
+			<a href="{% url 'whme' machine.id prob.id_problem cme.id %}">{{cme.nom}}</a>
+			{% endfor %}
+		</div>
+	</div>
+
+    <div class="col-md-4">
+		<div class="card card-body">
+			<h5 >Main_oeuvre</h5>
+			{% for cmai in cmai%}
+			<a href="{% url 'whmai' machine.id prob.id_problem cmai.id %}">{{cmai.nom}}</a>
+			{% endfor %}
+		</div>
+	</div>
+
+
+
+
+</div>
+
+<hr>
+
+
+
+
+{% endblock content%}

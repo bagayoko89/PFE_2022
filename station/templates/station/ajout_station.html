@@ -1,0 +1,34 @@
+{% extends 'main.html' %}
+{% block content %}
+
+{% if messages %}
+      {% for message in messages %}
+        <span class="block text-center text-xl">{{ message }}</span>
+      {% endfor %}
+    {% endif %}
+    <form action="" method="post" class="join-form mt-8 m-auto">
+      {% csrf_token %}
+      <h5>ajouter une nouvelle station</h5>
+      <div class="">
+        {{ form.Num_station }}
+        <span class="text-sm text-red-600">
+          {{form.Num_station.errors}}
+        </span>
+      </div>
+
+        <div class="">
+        {{ form.id_machine }}
+        <span class="text-sm text-red-600">
+          {{form.id_machine.errors}}
+        </span>
+      </div>
+
+
+      <div class="mt-4">
+        <input type="submit" value="Valider" class="bg-gray-900 p-3 cursor-pointer w-full">
+                      <form>
+  <input type="button" value="Retour" class="bg-gray-900 p-3 cursor-pointer w-full" onclick="history.go(-1)">
+</form>
+      </div>
+    </form>
+{% endblock content%}
